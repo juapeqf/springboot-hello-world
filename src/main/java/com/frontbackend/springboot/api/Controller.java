@@ -1,6 +1,6 @@
 package com.frontbackend.springboot.api;
 
-import com.frontbackend.springboot.controllers.models.SumaObject;
+import com.frontbackend.springboot.models.SumaObject;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

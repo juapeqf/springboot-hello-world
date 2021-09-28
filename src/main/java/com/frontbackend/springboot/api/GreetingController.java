@@ -1,6 +1,6 @@
 package com.frontbackend.springboot.api;
 
-import com.frontbackend.springboot.controllers.models.Greeting;
+import com.frontbackend.springboot.models.Greeting;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

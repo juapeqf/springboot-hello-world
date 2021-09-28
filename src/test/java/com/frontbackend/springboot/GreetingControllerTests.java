@@ -15,7 +15,7 @@
  */
 package com.frontbackend.springboot;
 
-import com.frontbackend.springboot.controllers.models.Greeting;
+import com.frontbackend.springboot.models.Greeting;
 import com.frontbackend.springboot.api.GreetingController;
 import org.junit.Assert;
 import org.junit.Test;

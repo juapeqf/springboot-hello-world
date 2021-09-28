@@ -1,4 +1,4 @@
-package com.frontbackend.springboot;
+package com.frontbackend.springboot.controllers.models;
 
 public class Greeting {
 

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 
+
 @Service
 @Component
 public class UserService {
@@ -21,5 +22,19 @@ public class UserService {
         userRepository.save(user);
         
         return "Saved";
+    }
+
+    public <Optional> User deleteUser(User user){
+        userRepository.delete(user);
+        return user;
+        
+    }
+
+    public Iterable<User> allUsers(){
+        return userRepository.findAll();
+    }
+
+    public void deleteById(Integer id){
+        userRepository.deleteById(id);
     }
 }

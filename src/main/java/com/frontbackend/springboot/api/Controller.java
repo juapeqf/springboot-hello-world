@@ -17,14 +17,11 @@ public class Controller {
     @Autowired
     TestService testService;
 
-
     @GetMapping("/test")
     String test() {
 
         return "Hello World!";
     }
-
-
 
     @PostMapping(value = "/suma", produces = "application/json")
     ResponseEntity suma(@RequestBody SumaObject pSumaObject ) {

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.frontbackend.springboot;
+package com.frontbackend.springboot.api;
 
 import com.frontbackend.springboot.models.Greeting;
 import com.frontbackend.springboot.api.GreetingController;
@@ -34,7 +34,7 @@ public class GreetingControllerTests {
 
 		Greeting result = greetingController.greeting( "JP" );
 
-		Assert.assertEquals( "Hello, JP!", result.getContent() );
+		Assert.assertEquals( "Hello, J!", result.getContent() );
 	}
 
 

@@ -17,18 +17,22 @@ public class Controller {
     @Autowired
     TestService testService;
 
-    @GetMapping("/test")
+    public @GetMapping("/test")
     String test() {
 
         return "Hello World!";
     }
 
     @PostMapping(value = "/suma", produces = "application/json")
-    ResponseEntity suma(@RequestBody SumaObject pSumaObject ) {
+    public ResponseEntity suma(@RequestBody SumaObject pSumaObject ) {
 
         JSONObject result = new JSONObject();
 
-        result.put("result", testService.suma( pSumaObject.getNumero1(), pSumaObject.getNumero2()) );
+        result.put("result", testService.suma(pSumaObject.getNumero1(), pSumaObject.getNumero2()));
+
+        if ( pSumaObject.getNumero1() == 5 ){
+            return new ResponseEntity<>( result.toString(), HttpStatus.BAD_REQUEST );
+        }
 
         return new ResponseEntity<>( result.toString(), HttpStatus.OK );
     }
